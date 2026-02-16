@@ -1,0 +1,32 @@
+# Ignore cloned SAM2 repo
+sam2/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Virtual environment
+CV-Venv/
+venv/
+.venv/
+
+# Logs
+*.log
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz

@@ -1,0 +1,6 @@
+{
+  "image": "thermal1.jpg",
+  "iou_classical_vs_sam2": 0.802035466006834,
+  "boundary_f1_tol_px": 2,
+  "boundary_f1_classical_vs_sam2": 0.4651072796382118
+}
