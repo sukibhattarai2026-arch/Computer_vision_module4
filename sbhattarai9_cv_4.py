@@ -1,21 +1,3 @@
-#!/usr/bin/env python3
-"""
-thermal_only_classical_vs_sam2.py
-
-Thermal-only pipeline:
-  - Classical (OpenCV-only): absolute-intensity threshold (NOT residual) + morphology + GrabCut refine
-  - SAM2 (DL) comparison: box-prompted using classical bbox
-  - Saves: masks, overlays, segmented, comparison panel, metrics.json
-
-Run (classical only):
-  python thermal_only_classical_vs_sam2.py --images Thermal.jpg thermal2.jpg --outdir out
-
-Run (classical + SAM2):
-  python thermal_only_classical_vs_sam2.py --images Thermal.jpg thermal2.jpg --outdir out --run_sam2 --device cpu ^
-    --sam2_cfg "D:\\...\\sam2\\sam2\\configs\\sam2.1\\sam2.1_hiera_l.yaml" ^
-    --sam2_checkpoint "D:\\...\\sam2\\checkpoints\\sam2.1_hiera_l.pt"
-"""
-
 import os
 import sys
 import json
@@ -26,7 +8,7 @@ import cv2
 import numpy as np
 
 # -----------------------------
-# Make SAM2 importable if repo is ./sam2
+# Making SAM2 importable if repo is ./sam2
 # -----------------------------
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 SAM2_REPO_DIR = os.path.join(PROJECT_DIR, "sam2")
